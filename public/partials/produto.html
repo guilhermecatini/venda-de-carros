@@ -1,0 +1,98 @@
+<div class="container-fluid" data-ng-init="vm.ListarProduto()">
+  <div class="row">
+
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+      <div class="flexslider">
+        <ul class="slides">
+          <li data-ng-repeat="(key, value) in vm.produto.fotos" data-thumb="{{value.imgUrl}}">
+            <img data-ng-src="{{value.imgUrl}}" />
+          </li>
+        </ul>
+      </div>    
+    </div>
+
+
+    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+      <h3>{{vm.produto.nome}}</h3>
+      <hr>
+      <p>{{vm.produto.ano_fabricacao}} / {{vm.produto.ano_modelo}}</p>
+      <p>Final da Placa: {{vm.produto.placa.substring(7)}}</p>
+      <p>{{vm.produto.kilometragem | number:0}} km</p>
+      <p>{{vm.produto.tipo_combustivel}}</p>
+      <br>
+      <h4>Observações</h4>
+      <hr>
+      <p>{{vm.produto.observacoes}}</p>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+<!-- Place somewhere in the <body> of your page -->
+
+
+
+<!--
+<style>
+  .img-thumbnail {
+    
+  }
+</style>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+      
+        <div id="links">
+          <div data-ng-repeat="ax in vm.fotos" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <a href="{{ax.imgUrl}}">
+              <img class="img img-thumbnail" data-ng-src="{{ax.imgUrl}}" alt="">
+            </a>
+          </div>
+        </div>
+      
+
+    </div>
+
+
+
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="background-color: black">
+      <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <img class="img" src="http://www.comprecar.com.br/upload/veiculos/thumb588x441/PHlv_J9ded_Ff73.jpg">
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div id="links">
+            <a data-ng-repeat="ax in vm.fotos" href="{{ax.imgUrl}}">
+              <img class="img img-thumbnail" data-ng-src="{{ax.imgUrl}}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+-->

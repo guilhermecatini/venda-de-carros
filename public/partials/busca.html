@@ -1,0 +1,30 @@
+<div class="container-fluid" data-ng-init="vm.ListarTodos()">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			
+      <table class="table table-hover table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Ano</th>
+            <th>Descricao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="(key, value) in vm.prods">
+            <td class="text-center">
+              <a href="#!/produto/{{value._id}}">
+                <img style="height: 100px;" class="img" ng-src="{{value.fotos[0].imgUrl}}">
+              </a>
+            </td>
+            <td>{{value.ano_modelo}}</td>
+            <td><a href="#!/produto/{{value._id}}">{{value.nome}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+		</div>
+	</div>
+</div>
