@@ -13,7 +13,7 @@ function BuscaController($http) {
 	vm.ListarTodos = function() {
 		$http({
 			method: 'GET',
-			url: 'http://172.16.2.28:3000/api/v1/produtos/find'
+			url: 'http://192.168.25.194:3000/api/v1/produtos/find'
 		})
 		.then(function(ret){
 			vm.prods = ret.data
